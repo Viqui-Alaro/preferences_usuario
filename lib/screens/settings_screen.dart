@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_preferences/widgets/side_menu.dart';
 
 
 class SettingScreen extends StatelessWidget {
@@ -16,6 +17,7 @@ class SettingScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Settings'),
       ),
+      drawer: const SideMenu(),
       body: const Center(
         child: Text('Hola Mundo'),
      ),
