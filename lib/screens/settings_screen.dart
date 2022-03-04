@@ -33,6 +33,32 @@ class SettingScreen extends StatelessWidget {
 
               }),
               Divider(),
+              RadioListTile(
+                value: 1,
+                groupValue: 1, 
+                title: const Text('Masculino'), 
+                onChanged: (value){
+
+                }),
+                Divider(),
+              RadioListTile(
+                value: 2,
+                groupValue: 1, 
+                title: const Text('Femenino'), 
+                onChanged: (value){
+                  
+                }),
+                const Divider(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextFormField(
+                    initialValue: 'Viqui',
+                    decoration: const InputDecoration(
+                      labelText: 'Nombre',
+                      helperText: 'Nombre de usuario'
+                    ),
+                  ),
+                )
               
 
             ],
