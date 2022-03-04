@@ -18,9 +18,27 @@ class SettingScreen extends StatelessWidget {
         title: const Text('Settings'),
       ),
       drawer: const SideMenu(),
-      body: const Center(
-        child: Text('Hola Mundo'),
-     ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Ajustes',style: TextStyle(fontSize: 45,fontWeight: FontWeight.w300) ),
+              const Divider(),
+              SwitchListTile.adaptive(
+                value: true, 
+                title: const Text('Darkmode'),
+                onChanged: (value){
+
+              }),
+              Divider(),
+              
+
+            ],
+          ),
+        ),
+      )
    );
   }
 }
