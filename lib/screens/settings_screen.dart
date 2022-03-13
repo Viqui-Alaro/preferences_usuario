@@ -18,7 +18,7 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
 
   bool isDarkmode = false;
-  int gender = 1;
+  Object gender = '1';
   String name= 'Maribel';
 
   @override
@@ -49,7 +49,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 groupValue: gender, 
                 title: const Text('Masculino'), 
                 onChanged: (value){
-                  gender = 1;
+                  gender = value ?? 1;
                     setState(() { });
                 }),
                 Divider(),
@@ -58,6 +58,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 groupValue: gender, 
                 title: const Text('Femenino'), 
                 onChanged: (value){
+                  gender = value ?? 1;
                   setState(() { });
                 }),
                 const Divider(),
