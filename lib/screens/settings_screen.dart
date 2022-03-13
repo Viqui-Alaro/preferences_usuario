@@ -58,7 +58,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 groupValue: gender, 
                 title: const Text('Femenino'), 
                 onChanged: (value){
-                  gender = value ?? 1;
+                  gender = value ?? 2;
                   setState(() { });
                 }),
                 const Divider(),
@@ -66,6 +66,10 @@ class _SettingScreenState extends State<SettingScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextFormField(
                     initialValue: 'Viqui',
+                    onChanged: (value){
+                      name= value;
+                      setState(() { }); 
+                    },
                     decoration: const InputDecoration(
                       labelText: 'Nombre',
                       helperText: 'Nombre de usuario'
